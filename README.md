@@ -4,7 +4,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             -   id: send_message
-                uses: akeylimepie/telegram-action@v0.1
+                uses: akeylimepie/telegram-action@main
                 with:
                     token: ${{ secrets.TOKEN }}
                     chat_id: ${{ secrets.CHAT_ID }}
