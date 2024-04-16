@@ -8,6 +8,7 @@ jobs:
                 with:
                     token: ${{ secrets.TOKEN }}
                     chat_id: ${{ secrets.CHAT_ID }}
+                    message_thread_id: ${{ secrets.TOPIC_ID }}
                     parse_mode: html
                     disable_notification: true
                     text: |
