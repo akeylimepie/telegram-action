@@ -1,13 +1,28 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: Send Telegram message
+description: Greet someone and record the time
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
+    token:
+        description: ''
+        required: true
+    chat_id:
+        description: 'Unique identifier for the target chat or username of the target channel (in the format @channelusername)'
+        required: true
+    message_thread_id:
+        description: 'Unique identifier for the target message thread (topic) of the forum; for forum supergroups only'
+        required: false
+    text:
+        description: 'Text of the message to be sent, 1-4096 characters after entities parsing'
+        required: true
+    parse_mode:
+        description: 'Mode for parsing entities in the message text. See formatting options for more details.'
+        required: false
+    disable_notification:
+        description: 'Sends the message silently. Users will receive a notification with no sound.'
+        required: false
+        default: 'false'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+    time: # id of output
+        description: 'The time we greeted you'
 runs:
-  using: 'node20'
-  main: 'index.js'
+    using: node20
+    main: src/index.js
