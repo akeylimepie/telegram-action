@@ -1,5 +1,11 @@
-name: Send Telegram message
-description: Greet someone and record the time
+name: Telegram message
+description: Send Telegram message
+author: akeylimepie
+
+branding:
+    icon: 'message-square'
+    color: 'blue'
+
 inputs:
     token:
         description: ''
